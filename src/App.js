@@ -1,11 +1,20 @@
+ 
 import React from "react";
 import "./styles.css";
+import Header from "../Components/Header";
+import { Switch, Route } from "react-router-dom";
+import routes from "../routes/routes";
+import Home from "../Pages/home";
 
 export default function App() {
   return (
     <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
+      <Header />
+      <Switch>
+        <Route path={routes.home}>
+          <Home />
+        </Route>
+      </Switch>
     </div>
   );
 }
